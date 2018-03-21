@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+</head>
+
+<body>
+	<div id="clock">
+
+	</div>
+	<div id="stepwatch">
+
+	</div>
+	<script type="text/javascript">
+	let clock = document.getElementById("clock");
+
+function timer() {
+	let time = new Date();
+	let hours = (time.getHours() % 12).toString();
+	let minutes = time.getMinutes().toString();
+	let seconds = time.getSeconds().toString();
+	console.log(hours, ":", minutes, ":", seconds);
+
+	let colck = document.getElementById("clock");
+	colck.innerHTML = hours + " : " + minutes + " : " + seconds;
+}
+timer();
+setInterval(timer, 1000);
+</script>
+</body>
+
+</html>
